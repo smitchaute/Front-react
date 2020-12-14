@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router"
+//import { Link } from "react-router"
 import "./../../../src/assets/css/style.css";
 //$fa-font-path: "~font-awesome/fonts/";
 //import "~font-awesome/scss/font-awesome";
 //import "./../../../src/assets/jss/owl.carousel.js";
 //import OwlCarousel from 'react-owl-carousel';
 
-import {image1, image2} from '../../assets/img'
+import {image1, image17, image18, image6, image20, image21, image23} from '../../assets/img'
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -316,7 +316,7 @@ function Index(props) {
                                     >
                                         <figure>
                                             <img
-                                                src={image2}
+                                                src={image6}
                                                 className="img-responsive"
                                                 alt=""
                                             />
@@ -331,7 +331,7 @@ function Index(props) {
                                     >
                                         <figure>
                                             <img
-                                                src={require('../../assets/img/g2.jpg')}
+                                                src={image17}
                                                 className="img-responsive"
                                                 alt=""
                                             />
@@ -346,7 +346,7 @@ function Index(props) {
                                     >
                                         <figure>
                                             <img
-                                                src={require('../../assets/img/g3.jpg')}
+                                                src={image18}
                                                 className="img-responsive"
                                                 alt=""
                                             />
@@ -355,13 +355,13 @@ function Index(props) {
                                 </div>
                                 <div className="product">
                                     <a
-                                        href={require('../../assets/img/g4.jpg')}
+                                        href="#"
                                         data-lightbox="example-set"
                                         data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis"
                                     >
                                         <figure>
                                             <img
-                                                src={require('../../assets/img/g4.jpg')}
+                                                src={image18}
                                                 className="img-responsive"
                                                 alt=""
                                             />
@@ -370,13 +370,13 @@ function Index(props) {
                                 </div>
                                 <div className="product">
                                     <a
-                                        href={require('../../assets/img/g5.jpg')}
+                                        href="#"
                                         data-lightbox="example-set"
                                         data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis"
                                     >
                                         <figure>
                                             <img
-                                                src={require('../../assets/img/g5.jpg')}
+                                                src={image20}
                                                 className="img-responsive"
                                                 alt=""
                                             />
@@ -385,13 +385,13 @@ function Index(props) {
                                 </div>
                                 <div className="product">
                                     <a
-                                        href={require('../../assets/img/g6.jpg')}
+                                        href="#"
                                         data-lightbox="example-set"
                                         data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis"
                                     >
                                         <figure>
                                             <img
-                                                src={require('../../assets/img/g6.jpg')}
+                                                src={image21}
                                                 className="img-responsive"
                                                 alt=""
                                             />
@@ -503,7 +503,7 @@ function Index(props) {
                                     </h6>
                                     <a href="#">
                                         <img
-                                            src={require('../../assets/img/g2.jpg')}
+                                            src={image17}
                                             className="img-responsive"
                                             alt=""
                                         />
@@ -514,7 +514,7 @@ function Index(props) {
                                     </a>
                                     <a href="#">
                                         <img
-                                            src={require('../../assets/img/g8.jpg')}
+                                            src={image23}
                                             className="img-responsive"
                                             alt=""
                                         />
@@ -525,7 +525,7 @@ function Index(props) {
                                     </a>
                                     <a href="#">
                                         <img
-                                            src={require('../../assets/img/g6.jpg')}
+                                            src={image21}
                                             className="img-responsive"
                                             alt=""
                                         />

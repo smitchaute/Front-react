@@ -1,9 +1,11 @@
 import React from "react";
+import { image17, image20, image23 } from "../../assets/img";
 import "./../../../src/assets/css/style.css";
 //$fa-font-path: "~font-awesome/fonts/";
 //import "~font-awesome/scss/font-awesome";
 //import "./../../../src/assets/jss/owl.carousel.js";
-import OwlCarousel from "react-owl-carousel";
+//import OwlCarousel from "react-owl-carousel";
+import {image21} from '../../assets/img'
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -367,7 +369,7 @@ function contact(props) {
                                     </h6>
                                     <a href="#">
                                         <img
-                                            src={require("../../assets/img/g2.jpg")}
+                                            src={image17}
                                             className="img-responsive"
                                             alt=""
                                         />
@@ -378,7 +380,7 @@ function contact(props) {
                                     </a>
                                     <a href="#">
                                         <img
-                                            src={require("../../assets/img/g8.jpg")}
+                                            src={image23}
                                             className="img-responsive"
                                             alt=""
                                         />
@@ -389,7 +391,7 @@ function contact(props) {
                                     </a>
                                     <a href="#">
                                         <img
-                                            src={require("../../assets/img/g6.jpg")}
+                                            src={image21}
                                             className="img-responsive"
                                             alt=""
                                         />

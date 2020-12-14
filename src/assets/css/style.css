@@ -14339,7 +14339,7 @@ button.owl-next {
 }
 
 .w3l-main-slider .banner-view {
-    background: url(./../../../src/assets/img/1.jpg) no-repeat center;
+    background: url("../img/1.jpg") no-repeat center;
     background-size: cover;
     min-height: 750px;
     position: relative;
@@ -14349,17 +14349,17 @@ button.owl-next {
 }
 
 .w3l-main-slider .banner-top1 {
-    background: url(./../../../src/assets/img/2.jpg) no-repeat center;
+    background: url("../img/2.jpg") no-repeat center;
     background-size: cover;
 }
 
 .w3l-main-slider .banner-top2 {
-    background: url(./../../../src/assets/img/3.jpg) no-repeat center;
+    background: url("../img/3.jpg") no-repeat center;
     background-size: cover;
 }
 
 .w3l-main-slider .banner-top3 {
-    background: url(./../../../src/assets/img/4.jpg) no-repeat center;
+    background: url("../img/4.jpg") no-repeat center;
     background-size: cover;
 }
 
