@@ -1,7 +1,7 @@
 import {
     blackColor,
-    whiteColor,
     hexToRgb,
+    bisque,
 } from "../../../../../src/assets/jss/material-dashboard-react.js";
 
 const logincard = {
@@ -12,7 +12,7 @@ const logincard = {
         marginLeft: "450px",
         borderRadius: "6px",
         color: "rgba(" + hexToRgb(blackColor) + ", 0.87)",
-        background: whiteColor,
+        background: bisque,
         width: "35%",
         boxShadow: "0 1px 4px 0 rgba(" + hexToRgb(blackColor) + ", 0.14)",
         position: "relative",

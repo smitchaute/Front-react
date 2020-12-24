@@ -1,4 +1,8 @@
-import React from "react";
+import {React, Redirect, Component} from "react";
+import {withRouter} from "react-router-dom"
+import PropTypes from 'prop-types';
+import axios from "axios";
+import { withStyles } from '@material-ui/styles';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 //mport InputLabel from "@material-ui/core/InputLabel";
@@ -13,8 +17,7 @@ import CardBody from "../../components/Card/CardBody.js";
 import CardFooter from "../../components/Card/CardFooter.js";
 
 //import avatar from "../../assets/img/faces/marc.jpg";
-
-const styles = {
+const useStyles = makeStyles(theme => ({
     cardCategoryWhite: {
         color: "rgba(255,255,255,.62)",
         margin: "0",
@@ -31,15 +34,77 @@ const styles = {
         marginBottom: "3px",
         textDecoration: "none",
     },
-};
+}));
 
-const useStyles = makeStyles(styles);
 
-export default function Login() {
-    const classes = useStyles();
-    return (
-        <div>
-            <GridContainer>
+// const useStyles = makeStyles(styles);
+class Login extends Component{
+    constructor() {
+        super();
+        localStorage.removeItem("username");
+        localStorage.removeItem("password");
+        this.state = {
+            data: [],
+            redirect: "",
+            username: "",
+            password: "",
+            errormsg: "",
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        var th = this;
+        this.serverRequest = axios
+            .get("http://127.0.0.1:8000/login/")
+            .then(function (res) {
+                th.setState({
+                    data: res.data,
+                });
+            });
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        ////////////Comparision for valid email ID////////////////
+        this.state.data.map((user) => {
+            if (
+                user.username === this.state.username &&
+                user.password === this.state.password
+            ) {
+                localStorage.setItem("username", this.state.username);
+                localStorage.setItem("password", user.password);        
+                this.props.history.push("/admin/Dashboard")
+                // this.setState({
+                
+                // });
+            } 
+        });
+    };
+
+    handleChange(e) {
+        const name = e.target.name;
+        const value = e.target.value;
+
+        this.setState({
+            [name]: value,
+        });
+
+        console.log(name,value);
+        console.log(this.state);
+    }
+
+
+    render(){
+        const {classes} = this.props;
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />;
+        }
+        return(
+            <div>
+                <form  onSubmit={this.handleSubmit}>
+                <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
                     <Card>
                         <CardHeader color="primary">
@@ -54,8 +119,10 @@ export default function Login() {
                             <GridContainer>
                                 <GridItem xs={12} sm={12} md={12}>
                                     <CustomInput
+                                        onChange={this.handleChange}
                                         labelText="Username"
                                         id="username"
+                                        name="username"
                                         formControlProps={{
                                             fullWidth: true,
                                         }}
@@ -65,8 +132,10 @@ export default function Login() {
                             <GridContainer>
                                 <GridItem xs={12} sm={12} md={12}>
                                     <CustomInput
+                                        onChange={this.handleChange}
                                         labelText="Password"
                                         id="password"
+                                        name="password"
                                         formControlProps={{
                                             fullWidth: true,
                                         }}
@@ -75,12 +144,20 @@ export default function Login() {
                             </GridContainer>
                         </CardBody>
                         <CardFooter>
-                            <Button color="primary">Login</Button>
+                            <Button color="primary" value="Login">Login</Button>
+                            {this.state.errormsg}
                         </CardFooter>
                     </Card>
                 </GridItem>
                 
             </GridContainer>
+                </form>
+            
         </div>
-    );
+        )
+    }
 }
+    Login.propTypes = {
+        classes: PropTypes.object.isRequired,
+    };
+export default withStyles(useStyles)(withRouter(Login));

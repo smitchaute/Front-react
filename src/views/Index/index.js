@@ -34,7 +34,7 @@ function Index(props) {
             <section className="w3l-bootstrap-header">
                 <nav className="navbar navbar-expand-lg navbar-light py-lg-3 py-2">
                     <div className="container">
-                        <a className="navbar-brand" href="index.html">
+                        <a className="navbar-brand" href="#">
                             <span className="fa fa-info"> -</span> Architect
                         </a>
                         {/* <!-- if logo is image enable this   
@@ -59,12 +59,12 @@ function Index(props) {
                         >
                             <ul className="navbar-nav mx-auto">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="" onClick={()=> props.history.push("/")}>
+                                    <a className="nav-link" href="#" onClick={()=> props.history.push("/")}>
                                         Home
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="about.html">
+                                    <a className="nav-link" href="#">
                                         About
                                     </a>
                                 </li>

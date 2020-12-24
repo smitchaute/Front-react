@@ -21,14 +21,14 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
 // core components
-//import Admin from "./layouts/Admin.js";
+import Admin from "../src/layouts/Admin";
 
 import "./assets/css/material-dashboard-react.css?v=1.9.0";
 import "./assets/css/style.css";
 import Login from "./components/Login/Login";
 import Index from "./views/Index/index";
 import Contact from "./views/Contact/contact";
-import Dashboard from "./views/Dashboard/Dashboard.js";
+//import Dashboard from "./views/Dashboard/Dashboard.js";
 
 const hist = createBrowserHistory();
 
@@ -36,7 +36,7 @@ ReactDOM.render(
     <Router history={hist}>
         <Switch>
             <Route path="/admin/login" component={Login} />
-            <Route path="/admin/Dashboard" component={Dashboard} />
+            <Route path="/admin/Dashboard" component={Admin} />
             <Route path="/contact" component={Contact} />
             <Route path="/" component={Index} />
         </Switch>
