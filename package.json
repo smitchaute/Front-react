@@ -27,8 +27,7 @@
     "react-scripts": "4.0.1",
     "routes.js": "0.0.1",
     "styled-components": "^5.2.1",
-    "web-vitals": "^0.2.4",
-    "proxy":"https://interior-react.herokuapp.com/"
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
