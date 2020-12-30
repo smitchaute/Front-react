@@ -62,7 +62,7 @@ class Dashboard extends React.Component{
   fetchTasks(){
     console.log('Fetching....')
 
-    fetch('http://127.0.0.1:8000/interior/')
+    fetch('https://interior-react.herokuapp.com/interior/')
     .then(Response => Response.json())
     .then(data => {
       console.log(data)
