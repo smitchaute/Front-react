@@ -101,7 +101,7 @@ class contact extends React.Component{
 
         var csrftoken = this.getCookie('csrftoken')
 
-        var url = 'http://127.0.0.1:8000/interior-create/'
+        var url = 'https://interior-react.herokuapp.com/interior-create/'
         fetch(url,{
             method:'POST',
             headers:{

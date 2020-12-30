@@ -57,7 +57,7 @@ class Login extends Component{
     componentDidMount() {
         var th = this;
         this.serverRequest = axios
-            .get("http://127.0.0.1:8000/login/")
+            .get("https://interior-react.herokuapp.com/login/")
             .then(function (res) {
                 th.setState({
                     data: res.data,
